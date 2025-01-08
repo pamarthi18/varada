@@ -2,10 +2,23 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin } from "lucide-react";
+import emailjs from 'emailjs-com';
+
+const SERVICE_ID = "service_bpt61vr"; //Enter your Service ID
+const TEMPLATE_ID = "template_wi9apsc"; //Enter your Template ID
+const PUBLIC_KEY = "5gSRcxh6YDVgq7rij"; //Enter your Public Key
 
 export const ContactForm = () => {
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
+      .then((result) => {
+        console.log(result.text);
+        
+      }, (error) => {
+        console.log(error.text);
+      });
+    e.target.reset()
   };
 
   return (
@@ -21,16 +34,16 @@ export const ContactForm = () => {
           <div>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <Input placeholder="Your Name" />
+                <Input placeholder="Your Name" id="from_name" name="from_name" />
               </div>
               <div>
-                <Input type="email" placeholder="Your Email" />
+                <Input type="email" placeholder="Your Email" id="from_email" name="from_email" />
               </div>
               <div>
                 <Input placeholder="Phone Number" />
               </div>
               <div>
-                <Textarea placeholder="Your Message" className="h-32" />
+                <Textarea placeholder="Your Message" name="message" className="h-32" />
               </div>
               <Button type="submit" className="w-full">Send Message</Button>
             </form>

@@ -54,7 +54,7 @@ export const Hero = () => {
           variant="outline"
           size="icon"
           onClick={handlePrevious}
-          className="bg-white/20 hover:bg-white/30 left-0 absolute ml-3"
+          className="bg-white/20 hover:bg-white/30 left-0 absolute ml-3 hidden md:flex"
         >
           <ChevronLeft className="h-4 w-4" />
         </Button>
@@ -101,7 +101,7 @@ export const Hero = () => {
           variant="outline"
           size="icon"
           onClick={handleNext}
-          className="bg-white/20 hover:bg-white/30 right-0 absolute mr-3"
+          className="bg-white/20 hover:bg-white/30 right-0 absolute mr-3 hidden md:flex"
         >
           <ChevronRight className="h-4 w-4" />
         </Button>
