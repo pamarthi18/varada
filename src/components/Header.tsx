@@ -21,21 +21,21 @@ export const Header = () => {
           <NavigationMenuList>
             <NavigationMenuItem>
               <button onClick={() => scrollToSection('hero')} className={cn(
-                "group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-lg font-medium transition-colors hover:text-lg hover:text-primary focus:bg-gray-100 focus:text-primary focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                "group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-lg font-medium transition-colors hover:text-lg hover:text-primary  focus:text-primary focus:outline-none disabled:pointer-events-none disabled:opacity-50"
               )}>
                 Home
               </button>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <button onClick={() => scrollToSection('services')} className={cn(
-                "group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-lg font-medium transition-colors hover:text-lg hover:text-primary focus:bg-gray-100 focus:text-primary focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                "group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-lg font-medium transition-colors hover:text-lg hover:text-primary  focus:text-primary focus:outline-none disabled:pointer-events-none disabled:opacity-50"
               )}>
                 Services
               </button>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <button onClick={() => scrollToSection('idea')} className={cn(
-                "group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-lg font-medium transition-colors hover:text-lg hover:text-primary focus:bg-gray-100 focus:text-primary focus:outline-none disabled:pointer-events-none disabled:opacity-50"
+                "group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-lg font-medium transition-colors hover:text-lg hover:text-primary  focus:text-primary focus:outline-none disabled:pointer-events-none disabled:opacity-50"
               )}>
                 Have an Idea
               </button>
